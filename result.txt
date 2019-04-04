@@ -1,0 +1,40 @@
+test_user_login_normal (test_user_login.TestUserLogin) ... ok
+test_user_login_password_wrong (test_user_login.TestUserLogin) ... ok
+test_user_reg_normal (test_user_reg.TestUserReg) ... ERROR
+testsuilteDemo (unittest.loader._FailedTest) ... ERROR
+
+======================================================================
+ERROR: test_user_reg_normal (test_user_reg.TestUserReg)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\myeclipse\PythonLearn\unittestTest\test_user_reg.py", line 60, in test_user_reg_normal
+    case_data=get_test_data(data_list, "test_user_reg_normal")
+NameError: name 'data_list' is not defined
+
+======================================================================
+ERROR: testsuilteDemo (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: testsuilteDemo
+Traceback (most recent call last):
+  File "D:\software\Python3.6.0\lib\unittest\case.py", line 393, in __init__
+    testMethod = getattr(self, methodName)
+AttributeError: 'TestUserReg' object has no attribute 'test_user_reg_exist'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\software\Python3.6.0\lib\unittest\loader.py", line 428, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\software\Python3.6.0\lib\unittest\loader.py", line 369, in _get_module_from_name
+    __import__(name)
+  File "F:\myeclipse\PythonLearn\unittestTest\testsuilteDemo.py", line 11, in <module>
+    suite.addTests(TestUserReg('test_user_reg_normal'),TestUserReg('test_user_reg_exist'))
+  File "D:\software\Python3.6.0\lib\unittest\case.py", line 399, in __init__
+    (self.__class__, methodName))
+ValueError: no such test method in <class 'test_user_reg.TestUserReg'>: test_user_reg_exist
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.171s
+
+FAILED (errors=2)
